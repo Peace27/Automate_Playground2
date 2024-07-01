@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 
-from ActionPage.action_page import PlayGroundPages
+from ActionPage.action_page import PlayGroundPages, AddNewCustomer
 
 
 @pytest.fixture(scope="module")
@@ -25,3 +25,9 @@ def test_login_page_on_automation_play_ground_website(login):
     login.enter_username("automation@gmail.com")
     login.enter_password("Password2@")
     login.click_login_button()
+    login.click_new_customer()
+
+def test_successful_login_redirects_to_dashboard(login):
+    login.enter_emailaddress("email@gmail.com")
+
+

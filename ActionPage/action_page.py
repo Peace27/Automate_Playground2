@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from LocatorPage.locators_pages import PlayGroundLocatorsPage
 
 
+
 # URL
 class PlayGroundPages:
     def __init__(self, driver):
@@ -29,3 +30,21 @@ class PlayGroundPages:
         click_login_button = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located(PlayGroundLocatorsPage.LOGIN_BUTTON))
         click_login_button.click()
+
+    def click_new_customer(self):
+        click_new_customer = WebDriverWait(self.driver, 20).until(
+            EC.presence_of_element_located(PlayGroundLocatorsPage.NEW_CUSTOMER))
+        click_new_customer.click()
+
+    def enter_emailaddress(self, email_address):
+        pass
+
+
+class AddNewCustomer:
+    def __init__(self, driver):
+        self.driver = driver
+
+    def enter_email_address(self, email_address):
+        enter_email_address = WebDriverWait(self.driver, 20).until(
+            EC.presence_of_element_located(AddNewCustomer.EMAIL_ADDRESS))
+        enter_email_address.send_keys(email_address)
