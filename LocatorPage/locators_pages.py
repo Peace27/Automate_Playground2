@@ -8,5 +8,14 @@ class PlayGroundLocatorsPage:
     NEW_CUSTOMER = (By.ID, "new-customer")
 
 
-class AddNewCustomer:
-    EMAIL_ADDRESS = (By.ID, "Email_Address")
+class AddNewCustomerLocators:
+    EMAIL_ADDRESS = (By.ID, "EmailAddress")
+    FIRST_NAME = (By.ID, "FirstName")
+    LAST_NAME = (By.ID, "LastName")
+    CITY = (By.ID, "City")
+    STATE = (By.XPATH, "state")
+    REGION = (By.XPATH, "region")
+
+
+
+

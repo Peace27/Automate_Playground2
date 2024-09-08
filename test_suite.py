@@ -27,7 +27,11 @@ def test_login_page_on_automation_play_ground_website(login):
     login.click_login_button()
     login.click_new_customer()
 
+
 def test_successful_login_redirects_to_dashboard(login):
-    login.enter_emailaddress("email@gmail.com")
-
-
+    test_add_new_customer_form = AddNewCustomer(login.driver)
+    test_add_new_customer_form.enter_email_address("email@gmail.com")
+    test_add_new_customer_form.enter_first_name("Jacob")
+    test_add_new_customer_form.enter_last_name("Othniel")
+    test_add_new_customer_form.enter_city("Lagos")
+    # test_add_new_customer_form.enter_state()
