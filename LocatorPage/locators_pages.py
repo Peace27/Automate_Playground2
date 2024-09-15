@@ -5,7 +5,10 @@ class PlayGroundLocatorsPage:
     USERNAME = (By.NAME, "email-name")
     PASSWORD = (By.NAME, "password-name")
     LOGIN_BUTTON = (By.NAME, "submit-name")
-    NEW_CUSTOMER = (By.ID, "new-customer")
+
+
+class ClickNewCustomerLocatorsPage:
+    NEW_CUSTOMER = (By.XPATH, "/html/body/div/a")
 
 
 class AddNewCustomerLocators:
@@ -13,9 +16,5 @@ class AddNewCustomerLocators:
     FIRST_NAME = (By.ID, "FirstName")
     LAST_NAME = (By.ID, "LastName")
     CITY = (By.ID, "City")
-    STATE = (By.XPATH, "state")
-    REGION = (By.XPATH, "region")
-
-
-
-
+    STATE = (By.XPATH, "/html/body/section/div/div/div/div/form/div[5]/select")
+    SUBMIT_BUTTON = (By.XPATH, "/html/body/section/div/div/div/div/form/button")
